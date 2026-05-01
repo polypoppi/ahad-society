@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events. | ahad society.</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Space+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <div class="nav-wrapper">
+        <nav class="container">
+            <a href="index.html" class="logo">ahad society.</a>
+            <div class="nav-links">
+                <a href="about.html">about.</a>
+                <a href="events.html" class="active">events.</a>
+                <a href="#">subscribe.</a>
+            </div>
+        </nav>
+    </div>
+
+    <main class="container">
+        <header class="page-header fade-in">
+            <h1>the lineup.</h1>
+        </header>
+
+        <!-- UPCOMING EVENTS / TERMINAL EMBED -->
+        <section class="fade-in">
+            <h2>book admission.</h2>
+            <p>reserve your spot below. spaces are kept intentional and highly limited.</p>
+            
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <div class="terminal-body">
+                    <p>> fetching upcoming events...</p>
+                    <p>> [ paste your luma dark mode iframe embed code here ]</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PLANNED / FUTURE EVENTS -->
+        <section class="fade-in">
+            <h2>in the pipeline.</h2>
+            <p>what we are planning for the upcoming months. stay tuned on our instagram for official dates.</p>
+            
+            <div class="planned-events-grid">
+                <div class="planned-row">
+                    <span class="mono-text">01 / analog photography walk</span>
+                    <span class="mono-text status">status: planning</span>
+                </div>
+                <div class="planned-row">
+                    <span class="mono-text">02 / midnight coffee & code</span>
+                    <span class="mono-text status">status: venue scouting</span>
+                </div>
+                <div class="planned-row">
+                    <span class="mono-text">03 / quiet reading club</span>
+                    <span class="mono-text status">status: confirmed</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="container">
+        <div>ahad society. &copy; <span id="current-year"></span>.</div>
+        <div>built for the weekend.</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
