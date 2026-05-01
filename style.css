@@ -83,7 +83,6 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* border-bottom removed to make the line disappear */
     background: transparent;
 }
 
@@ -362,4 +361,21 @@ footer {
     .hero-content { width: 100%; min-width: auto; height: auto; padding-top: 8rem; padding-left: 2rem; padding-right: 2rem; }
     .hero-video-wrapper { width: 100%; flex: 1; }
     .planned-row { flex-direction: column; gap: 0.5rem; }
+}
+
+/* --- COLLABORATORS FLOATING ANIMATION --- */
+.floating-brand {
+    animation: float 4s ease-in-out infinite;
+    transition: opacity 0.3s ease;
+}
+
+.floating-brand:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
 }
