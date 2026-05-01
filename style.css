@@ -165,7 +165,9 @@ nav {
 
 .btn {
     flex: 1;
-    display: inline-block;
+    display: flex; /* Updated to Flex */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
     background: var(--text-primary);
     color: var(--bg-color);
     padding: 0.75rem 1.5rem;
@@ -175,6 +177,7 @@ nav {
     border: 1px solid var(--text-primary);
     transition: transform 0.2s ease, opacity 0.2s ease, background 0.2s ease;
     text-align: center;
+    white-space: nowrap; /* Prevents text from breaking into two lines */
 }
 
 .btn-secondary {
