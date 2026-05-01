@@ -83,7 +83,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid var(--border-color);
+    /* border-bottom removed to make the line disappear */
     background: transparent;
 }
 
@@ -91,11 +91,7 @@ nav {
     color: var(--text-primary);
     text-decoration: none;
     font-size: 1.25rem;
-    
-    /* ADDED PADDING: Increases clickable area */
     padding: 0.5rem 1rem; 
-    
-    /* Offset pulls it left so the physical text still aligns perfectly with content below */
     margin-left: -1rem; 
     border-radius: 4px;
     transition: opacity 0.2s ease;
@@ -107,8 +103,8 @@ nav {
 
 .nav-links {
     display: flex;
-    /* Reduced gap because the new padding on the links provides natural spacing */
     gap: 0.5rem; 
+    flex-wrap: wrap; 
 }
 
 .nav-links a {
@@ -117,13 +113,10 @@ nav {
     font-family: 'Space Mono', monospace;
     font-size: 0.9rem;
     transition: color 0.2s ease, background 0.2s ease;
-    
-    /* ADDED PADDING: Turns standard text links into button-like hitboxes */
     padding: 0.5rem 1rem; 
     border-radius: 4px;
 }
 
-/* Subtle background color reveals the padded area on hover */
 .nav-links a:hover, .nav-links a.active {
     color: var(--text-primary);
     background: var(--accent-bg); 
@@ -214,7 +207,6 @@ nav {
     background: var(--accent-bg);
 }
 
-/* HTML5 Video object-fit */
 .hero-video-wrapper video {
     width: 100%;
     height: 100%;
@@ -295,6 +287,52 @@ section { margin-bottom: 6rem; }
     border-radius: 8px;
 }
 
+/* Past Events Grid & Cards */
+.past-events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.past-event-card {
+    background: var(--accent-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.past-event-card:hover {
+    transform: translateY(-4px); 
+    border-color: var(--text-secondary);
+}
+
+.past-event-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    filter: grayscale(100%) contrast(110%); 
+    transition: filter 0.4s ease;
+}
+
+.past-event-card:hover .past-event-image {
+    filter: grayscale(0%) contrast(100%); 
+}
+
+.past-event-content {
+    padding: 1.5rem;
+}
+
+.past-event-content h3 {
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
+}
+
+.past-event-content p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
 /* Footer */
 footer {
     border-top: 1px solid var(--border-color);
@@ -323,4 +361,5 @@ footer {
     .hero { flex-direction: column; height: 100vh; gap: 0; }
     .hero-content { width: 100%; min-width: auto; height: auto; padding-top: 8rem; padding-left: 2rem; padding-right: 2rem; }
     .hero-video-wrapper { width: 100%; flex: 1; }
+    .planned-row { flex-direction: column; gap: 0.5rem; }
 }
